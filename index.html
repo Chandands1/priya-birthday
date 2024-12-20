@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Priya_nin_birthday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Happy Birthday, Priya!</h1>
+        </header>
+        <main>
+            <section class="photo-section">
+                <img src="./photos/priya_photo_1.png" alt="Priya's Photo" class="photo">
+                <button class="play-button" onclick="playLaugh()">Hear Priya's Laugh</button>
+                <audio id="laughter" controls>
+                    <source src="./sounds/priya_laugh.ogg" type="audio/ogg">
+                    <source src="./sounds/priya_laugh.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <!-- New Buttons -->
+                <button class="memory-button" onclick="location.href='./memories.html'">Memories</button>
+                <button class="wish-button" onclick="location.href='./wish.html'">Wishes</button>
+            </section>
+        </main>
+        
+    </div>
+
+    <script>
+        function playLaugh() {
+            const laughter = document.getElementById('laughter');
+            laughter.play();
+        }
+    </script>
+</body>
+</html>
